@@ -1,6 +1,6 @@
 async function handleRequest(request: Request) {
   const { pathname } = new URL(request.url);
-  if (pathname.startsWith("/style.css")) {
+  if (pathname.startsWith("/deno.png")) {
     const file = await Deno.readFile("./deno.png");
     return new Response(file, {
       headers: {
